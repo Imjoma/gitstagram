@@ -85,7 +85,7 @@ const Header = ({ user }) => {
               className={`${githubUser.width}  ${githubUser.paddingX} flex  p-3  md:hidden    items-center justify-center origin-left   duration-200 ease-out absolute z-50   h-5 overflow-hidden     rounded-full script-mt-bold left-[80%]   top-2 text-dark-blue opacity-90 bg-light`}
               onClick={handleClickUser}
             >
-              <span>{githubUser.name}</span>
+              <span className="select-none card">{githubUser.name}</span>
             </div>
 
             {/* Image */}

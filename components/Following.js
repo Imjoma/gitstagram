@@ -29,8 +29,8 @@ const Following = () => {
 
   return (
     <>
-      <div className="flex flex-row justify-between ">
-        <div className="font-medium">Following </div>
+      <div className="flex flex-row justify-between select-none card ">
+        <div className="font-medium ">Following </div>
         <Link href="/following">
           <button className="text-sm text-accent-2">See All</button>
         </Link>

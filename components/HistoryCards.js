@@ -68,7 +68,7 @@ const HistoryCards = ({
 
   return (
     <>
-      <div className="relative flex flex-row items-center justify-between rounded ">
+      <div className="relative flex flex-row items-center justify-between rounded select-none btn-long-click card ">
         <Link href={"/github/" + consume.term}>
           <div className="w-full py-2 duration-300 ease-out cursor-pointer hover:opacity-60">
             <div className={`flex flex-row items-center space-x-3  `}>

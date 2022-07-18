@@ -7,7 +7,7 @@ const Charisma = ({ char }) => {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center md:space-x-3 md:flex-row ">
+      <div className="flex flex-col items-center justify-center select-none card md:space-x-3 md:flex-row ">
         <span className="font-semibold"> {kFormatter(char.count)}</span>
         <span className="text-sm opacity-90">{char.category}</span>
       </div>

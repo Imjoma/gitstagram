@@ -1,6 +1,9 @@
 import React from "react";
+import { useRouter } from "next/router";
 
 const Error = ({ userId, user }) => {
+  const router = useRouter();
+
   const errorUi = () => {
     if (user === undefined || user === null) {
       return (
@@ -23,7 +26,7 @@ const Error = ({ userId, user }) => {
     <div className="flex flex-col space-y-4 h-fixed-screen">
       <div className="w-full md:text-xl">{errorUi()}</div>
       <div>
-        <button>Go back to Homepage</button>
+        <button onClick={() => router.back()}>Go back to Homepage</button>
       </div>
     </div>
   );

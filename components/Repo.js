@@ -8,9 +8,9 @@ const Repo = ({ repo }) => {
     <>
       <a href={repo.html_url} target="_blank" rel="noreferrer">
         <div className="p-[2px] marker: rounded dark:from-transparent dark:to-transparent dark:border dark:border-accent-2 bg-gradient-to-br from-accent-2 via-transparent to-accent ">
-          <div className="p-4 space-y-3 rounded bg-light dark:bg-transparent">
+          <div className="p-4 space-y-4 rounded md:p-6 md:space-y-6 bg-light dark:bg-transparent">
             {/* card header */}
-            <div className="flex flex-row items-start space-x-4 ">
+            <div className="flex flex-row items-start space-x-4 md:space-x-6 ">
               <div className="relative block w-12 h-12 rounded-full basis-12 md:basis-20 md:w-20 md:h-20 ">
                 <Image
                   className="absolute rounded-full"

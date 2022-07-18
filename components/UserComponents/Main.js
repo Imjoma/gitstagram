@@ -7,7 +7,9 @@ const Main = ({ user }) => {
   const { handleSaveFollow, followed, setFollowed } =
     useContext(FollowedContext);
 
-  const alreadyFollowed = followed.find((follow) => follow.name === user.name);
+  const alreadyFollowed = followed.find(
+    (follow) => follow.term === user.login.toLowerCase()
+  );
 
   const handleFollowClick = () => {
     const id = uuidv4();

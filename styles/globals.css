@@ -48,12 +48,29 @@
   src: url(../public/src/fonts/SCRIPTBL.TTF);
 }
 
+.card {
+  -webkit-tap-highlight-color: transparent;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: "Inter", sans-serif;
 }
+
+/* .layout::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.layout::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.layout::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background: #ef2787;
+} */
 
 .oleo {
   font-family: "Oleo Script";

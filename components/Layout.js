@@ -79,7 +79,7 @@ const Layout = ({ children }) => {
             </motion.div>
           )}
         </AnimatePresence>
-        <div className={`w-full h-screen overflow-x-hidden`}>
+        <div className={`w-full h-screen overflow-x-hidden overflow-y-scroll `}>
           {isLoaded && page}
         </div>
       </ThemeProvider>

@@ -7,6 +7,7 @@ import Following from "../../components/Following";
 import DeleteHisotry from "../../components/Modal/DeleteHisotry";
 import useToggle from "../../hooks/useToggle";
 import Modal from "../../components/Modal/Modal";
+import Head from "next/head";
 
 const HistoryPage = () => {
   const { state, toggleState, resetState } = useToggle();
@@ -80,16 +81,19 @@ const HistoryPage = () => {
 
   return (
     <>
+      <Head>
+        <title>Search History - Gitstagram</title>
+      </Head>
       <div className="flex flex-col space-y-8">
         {/* Followed History */}
         {checkFollowedUI()}
 
         {/* Search History */}
         <div className="space-y-2">
-          <div className="flex flex-row justify-between ">
-            <div className="font-medium">Searh History </div>
+          <div className="flex flex-row justify-between select-none card ">
+            <div className="font-medium ">Searh History </div>
             <button
-              className="text-sm text-accent-2"
+              className="text-sm text-accent-2 "
               onClick={() => toggleState()}
             >
               Clear All

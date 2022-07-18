@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useRef } from "react";
 import { useRouter } from "next/router";
 import { FiSearch } from "react-icons/fi";
 
@@ -20,6 +20,11 @@ const Searchbar = () => {
   const [search, setSearch] = useState("");
   const router = useRouter();
   const id = uuidv4();
+  const refSearchbar = useRef(null);
+
+  const handleRedirect = () => {
+    router.asPath === "/" && router.push("/github");
+  };
 
   const handleChange = (e) => {
     const searchInput = e.target.value;
@@ -29,14 +34,16 @@ const Searchbar = () => {
 
   const handleSubmitSearch = (e) => {
     e.preventDefault();
-    // push directly to profile page
 
+    // show a pop up message
+    if (search === "" || search.trim().length === 0 || search.includes("/"))
+      return null;
+
+    // push directly to profile page
     router.push("/github/" + search.toLowerCase());
 
     // wait for atleast 1 sec to save the search term whether exisiting or not
     setTimeout(() => {
-      if (search === "" || search.trim().length === 0) return null;
-
       const exist = searchHistories.find(
         (history) => history.term.toLowerCase() === search.toLowerCase()
       );
@@ -123,6 +130,8 @@ const Searchbar = () => {
               placeholder="type your source code"
               value={search}
               onChange={handleChange}
+              ref={refSearchbar}
+              onFocus={handleRedirect}
             />
             <div className="absolute text-xl none dark:opacity-50 opacity-30 top-3 left-4 ">
               <FiSearch />

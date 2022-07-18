@@ -5,7 +5,7 @@ import Link from "next/link";
 const FollowingsCard = ({ following }) => {
   return (
     <Link href={"/github/" + following.term}>
-      <div className="flex flex-col space-y-2 duration-300 ease-out cursor-pointer hover:opacity-60 ">
+      <div className="flex flex-col space-y-2 duration-300 ease-out cursor-pointer select-none btn-click card hover:opacity-60">
         <div className="mx-auto">
           <Image
             className="rounded-full "

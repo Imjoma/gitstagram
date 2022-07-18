@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React, { useContext, useState, useEffect } from "react";
 import { BiSortAlt2 } from "react-icons/bi";
 import { FollowedContext } from "../../components/FollowedContext";
@@ -89,6 +90,9 @@ const FollowingPage = () => {
   };
   return (
     <>
+      <Head>
+        <title>Followings - Gitstagram</title>
+      </Head>
       <div>
         <div className="flex flex-row justify-between ">
           <div className="font-medium">Sorted by Default</div>
