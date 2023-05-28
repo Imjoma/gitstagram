@@ -31,32 +31,18 @@ const Greet = () => {
 
   return (
     <>
-      <div className="relative flex flex-col items-center max-w-sm p-4 space-y-2 ">
+      <article className="relative flex flex-col items-center max-w-sm p-4 space-y-2 ">
         {greetingsHeader}
 
-        <h3 className="text-lg font-semibold text-center">
+        <div className="text-lg font-semibold text-center">
           Developer&apos;s Message:
-        </h3>
+        </div>
 
-        <h3 className="italic ">
-          &quot;
-          <span className="font-medium">Welcome to Gitstagram, </span>
-          <span className="opacity-70">
-            my name is Joma and I want you to have a delightful learning
-            experience.
-          </span>
-          <div>
-            <span className="opacity-70">
-              This app was built to tell everyone that coding is just as simple
-              as learning a new application.
-            </span>
-            &quot;
-          </div>
-        </h3>
-        <footer className="mt-4 text-center md:text-sm text-accent-2 ">
-          Don&apos;t show again
-        </footer>
-      </div>
+        <div className="text-sm italic">
+          <div className="font-medium">Welcome to Gitstagram, </div>
+          <span className="opacity-80"></span>
+        </div>
+      </article>
     </>
   );
 };

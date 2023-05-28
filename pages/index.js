@@ -9,11 +9,12 @@ export default function Home() {
         <title>Gitstagram</title>
       </Head>
 
-      <div className="flex items-center h-[calc(100vh_-_300px)] justify-center  border-gray dark:border-opacity-20 md:border md:rounded-lg">
-        <div>
+      {/* if want to center the empty state:  h-[calc(100vh_-_300px)] */}
+      <main className="flex flex-col items-center justify-center border-gray dark:border-opacity-20 md:border md:rounded-lg">
+        <section className="flex flex-col space-y-4 ">
           <Empty />
-        </div>
-      </div>
+        </section>
+      </main>
     </>
   );
 }
